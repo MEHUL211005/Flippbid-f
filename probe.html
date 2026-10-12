@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>probe-outer</title>
+    <style>html,body{margin:0}iframe{border:0;display:block}</style>
+  </head>
+  <body>
+    <script type="module">
+      var params = new URLSearchParams(location.search);
+      var w = parseInt(params.get('w') || '500', 10);
+      var f = document.createElement('iframe');
+      f.src = '/inner.html' + (params.get('debug') ? '?debug=1' : '');
+      f.style.width = w + 'px';
+      f.style.height = '1000px';
+      document.body.appendChild(f);
+      var t = setInterval(function () {
+        try {
+          var cd = f.contentDocument;
+          var el = cd && cd.getElementById('MEASURE');
+          if (el && !document.getElementById('MEASURE')) {
+            clearInterval(t);
+            var d = document.createElement('pre');
+            d.id = 'MEASURE';
+            d.textContent = el.textContent;
+            document.body.appendChild(d);
+          }
+        } catch (e) {}
+      }, 100);
+    </script>
+  </body>
+</html>

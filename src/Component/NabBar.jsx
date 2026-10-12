@@ -9,37 +9,41 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <nav className="h-[90px] w-full flex relative overflow-visible bg-white shadow-sm z-50">
-      <div className="px-[20px] sm:px-[40px] lg:px-[80px] flex w-full items-center justify-between">
+    <nav className="h-[64px] sm:h-[80px] xl:h-[90px] w-full flex relative overflow-visible bg-white shadow-sm z-50">
+      <div className="px-4 sm:px-6 lg:px-10 xl:px-20 flex w-full items-center justify-between gap-2 xl:gap-0">
         {/* Logo */}
         <img
           src={logo}
           alt="Logo"
-          className="h-[60px] sm:h-[75px] lg:h-[70px] shrink-0"
+          className="h-[42px] sm:h-[56px] lg:h-[58px] xl:h-[70px] shrink-0"
         />
         {/* Desktop Navigation Links */}
-        <ul className="hidden lg:flex items-center gap-[20px] xl:gap-[32px] text-[16px] ml-6 lg:ml-10 xl:ml-20 mr-auto whitespace-nowrap">
-          <li className="text-[16px] font-bold text-[#575665] cursor-pointer">
+        <ul className="hidden lg:flex items-center gap-4 xl:gap-[32px] text-[14px] xl:text-[16px] ml-4 lg:ml-10 xl:ml-20 mr-auto whitespace-nowrap">
+          <li className="text-[14px] xl:text-[16px] font-bold text-[#575665] cursor-pointer">
             Home
           </li>
-          <li className="text-[16px] text-[#6B7280] hover:text-black cursor-pointer transition-colors">
+          <li className="text-[14px] xl:text-[16px] text-[#6B7280] hover:text-black cursor-pointer transition-colors">
             7 Day Trial
           </li>
-          <li className="text-[16px] text-[#6B7280] hover:text-black cursor-pointer transition-colors">
+          <li className="text-[14px] xl:text-[16px] text-[#6B7280] hover:text-black cursor-pointer transition-colors">
             Submit Property
           </li>
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden lg:flex items-center gap-3 ml-auto">
-          <Button className="bg-[#CCF1F7] w-[150px] xl:w-[160px] h-[45px] xl:h-[49px] font-bold rounded-[8.07px] text-sm xl:text-base">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3 ml-auto">
+          <Button className="bg-[#CCF1F7] w-[105px] lg:w-[120px] xl:w-[160px] h-[38px] lg:h-[42px] xl:h-[49px] font-bold rounded-[8.07px] text-[13px] xl:text-base whitespace-nowrap">
             Book a Demo
           </Button>
-          <Button className="h-[45px] xl:h-[49px] w-[110px] xl:w-[126px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white font-bold rounded-[8.07px] text-sm xl:text-base">
+          <Button className="h-[38px] lg:h-[42px] xl:h-[49px] w-[88px] lg:w-[100px] xl:w-[126px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white font-bold rounded-[8.07px] text-[13px] xl:text-base">
             Sign Up
           </Button>
-          <Button className="h-[45px] xl:h-[49px] w-[110px] xl:w-[126px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white font-bold rounded-[8.07px] text-sm xl:text-base">
+          <Button className="h-[38px] lg:h-[42px] xl:h-[49px] w-[88px] lg:w-[100px] xl:w-[126px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white font-bold rounded-[8.07px] text-[13px] xl:text-base">
             Log In
           </Button>
         </div>
@@ -54,7 +58,7 @@ function Navbar() {
             {isOpen ? (
               // Close (X) Icon
               <svg
-                className="w-7 h-7"
+                className="w-6 h-6 sm:w-7 sm:h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -69,7 +73,7 @@ function Navbar() {
             ) : (
               // Hamburger Icon
               <svg
-                className="w-7 h-7"
+                className="w-6 h-6 sm:w-7 sm:h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -88,20 +92,29 @@ function Navbar() {
 
       {/* Mobile & Tablet Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-[90px] right-0 w-[200px] bg-white shadow-lg border-t border-gray-100 flex flex-col px-6 py-6 gap-5 lg:hidden z-50">
+        <div className="absolute top-full right-0 w-[220px] sm:w-[280px] bg-white shadow-lg border-t border-gray-100 flex flex-col px-6 py-6 gap-5 lg:hidden z-50">
           <ul className="flex flex-col gap-4 text-base">
-            <li className="font-bold text-[#575665] cursor-pointer pb-2 border-b border-gray-100">
+            <li
+              onClick={closeMenu}
+              className="font-bold text-[#575665] cursor-pointer pb-2 border-b border-gray-100"
+            >
               Home
             </li>
-            <li className="text-[#6B7280] cursor-pointer pb-2 border-b border-gray-100">
+            <li
+              onClick={closeMenu}
+              className="text-[#6B7280] cursor-pointer pb-2 border-b border-gray-100"
+            >
               7 Day Trial
             </li>
-            <li className="text-[#6B7280] cursor-pointer pb-2 border-b border-gray-100">
+            <li
+              onClick={closeMenu}
+              className="text-[#6B7280] cursor-pointer pb-2 border-b border-gray-100"
+            >
               Submit Property
             </li>
           </ul>
 
-          <div className="flex flex-col sm:flex-col gap-3 pt-2">
+          <div className="flex flex-col gap-3 pt-2">
             <Button className="bg-[#CCF1F7] w-full h-[45px] font-bold rounded-[8.07px] text-sm">
               Book a Demo
             </Button>

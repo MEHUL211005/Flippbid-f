@@ -17,13 +17,16 @@ function MainSection() {
         bg-cover
         bg-center
 
-        h-[600px]
+        min-h-[660px]
 
-        sm:h-[467px]
+        sm:min-h-[620px]
 
-        md:h-[650px]
+        md:min-h-[680px]
 
-        lg:h-[calc(100vh-90px)]
+        lg:min-h-[720px]
+
+        xl:h-[calc(100vh-90px)]
+        xl:min-h-[640px]
       "
       style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -35,11 +38,11 @@ function MainSection() {
           absolute
           z-30
 
-          top-[20px]
-          right-[15px]
+          top-[16px]
+          right-[12px]
 
-          w-[80px]
-          h-[75px]
+          w-[72px]
+          h-[68px]
 
           sm:top-[20px]
           sm:right-[20px]
@@ -51,10 +54,10 @@ function MainSection() {
           md:w-[95px]
           md:h-[90px]
 
-          lg:top-[4%]
-          lg:right-[2%]
-          lg:w-[108px]
-          lg:h-[103px]
+          xl:top-[4%]
+          xl:right-[2%]
+          xl:w-[108px]
+          xl:h-[103px]
 
           bg-gradient-to-tl
           from-[#1C1A1B]
@@ -72,8 +75,8 @@ function MainSection() {
           src={Zoom}
           alt="Zoom"
           className="
-            w-[25px]
-            h-[25px]
+            w-[24px]
+            h-[24px]
 
             sm:w-[24px]
             sm:h-[23px]
@@ -81,8 +84,8 @@ function MainSection() {
             md:w-[32px]
             md:h-[32px]
 
-            lg:w-[38px]
-            lg:h-[38px]
+            xl:w-[38px]
+            xl:h-[38px]
           "
         />
 
@@ -90,11 +93,11 @@ function MainSection() {
           className="
             text-white
             font-semibold
-            text-[11px]
+            text-[10px]
 
             sm:text-[10px]
             md:text-[13px]
-            lg:text-[16px]
+            xl:text-[16px]
           "
         >
           Join Demo
@@ -109,24 +112,28 @@ function MainSection() {
           absolute
           z-10
 
-          top-[70px]
-          right-[-20px]
+          top-[100px]
+          right-[0px]
 
-          w-[220px]
+          w-[125px]
           h-auto
 
-          sm:top-[75px]
-          sm:right-[13px]
-          sm:w-[250px]
+          sm:top-[88px]
+          sm:right-[8px]
+          sm:w-[200px]
 
-          md:top-[65px]
-          md:right-[10px]
-          md:w-[290px]
+          md:top-[120px]
+          md:right-[20px]
+          md:w-[250px]
 
-          lg:top-[6%]
-          lg:right-[10%]
-          lg:w-[350px]
-          lg:h-[550px]
+          lg:top-[140px]
+          lg:right-[60px]
+          lg:w-[260px]
+
+          xl:top-[6%]
+          xl:right-[10%]
+          xl:w-[350px]
+          xl:h-[550px]
         "
       />
 
@@ -136,27 +143,35 @@ function MainSection() {
           absolute
           z-20
 
-          top-[70px]
-          left-[50%]
-          -translate-x-1/2
+          top-[104px]
+          left-auto
+          right-[117px]
 
-          w-[285px]
-          h-[40px]
+          w-[200px]
+          h-[36px]
 
-          sm:top-[84px]
-          sm:left-[261px]
-          sm:w-[245px]
-          sm:h-[42px]
+          sm:top-[96px]
+          sm:right-[195px]
+          sm:left-auto
+          sm:w-[275px]
+          sm:h-[40px]
 
-          md:top-[75px]
-          md:w-[350px]
+          md:top-[132px]
+          md:right-[254px]
+          md:w-[315px]
           md:h-[44px]
 
-          lg:top-[69px]
-          lg:left-[480px]
-          lg:translate-x-0
-          lg:w-[349px]
+          lg:top-[150px]
+          lg:right-[303px]
+          lg:w-[315px]
           lg:h-[44px]
+
+          xl:top-[69px]
+          xl:left-[480px]
+          xl:right-auto
+          xl:translate-x-0
+          xl:w-[349px]
+          xl:h-[44px]
 
           bg-white
           rounded-[50px]
@@ -168,14 +183,16 @@ function MainSection() {
           className="
             absolute
 
-            left-[10px]
-            top-[9px]
+            left-[6px]
+            top-[10px]
 
-            w-[20px]
-            h-[19px]
+            w-[16px]
+            h-[16px]
 
             sm:left-[12px]
             sm:top-[10px]
+            sm:w-[20px]
+            sm:h-[19px]
 
             md:w-[22px]
             md:h-[20px]
@@ -186,14 +203,19 @@ function MainSection() {
           className="
             absolute
 
-            left-[38px]
+            left-[28px]
             top-[10px]
+            right-[28px]
 
-            sm:left-[43px]
+            sm:left-[42px]
+            sm:right-[40px]
 
             md:left-[45px]
+            md:right-[40px]
 
             whitespace-nowrap
+            overflow-hidden
+            text-ellipsis
 
             bg-gradient-to-r
             from-[#003F79]
@@ -205,7 +227,7 @@ function MainSection() {
             font-semibold
             font-alkatra
 
-            text-[11px]
+            text-[9px]
 
             sm:text-[12px]
             md:text-[14px]
@@ -219,16 +241,30 @@ function MainSection() {
           className="
             absolute
 
-            left-[250px]
-            top-[18px]
+            right-[2px]
+            top-[9px]
 
-            w-[39px]
-            h-[45px]
+            w-[28px]
+            h-[32px]
 
-            sm:left-[210px]
-            sm:top-[25px]
+            sm:right-[2px]
+            sm:top-[12px]
+            sm:w-[34px]
+            sm:h-[38px]
 
-            md:left-[303px]
+            md:right-[2px]
+            md:top-[13px]
+            md:w-[38px]
+            md:h-[42px]
+
+            lg:right-[2px]
+            lg:top-[13px]
+
+            xl:left-[303px]
+            xl:right-auto
+            xl:top-[25px]
+            xl:w-[39px]
+            xl:h-[45px]
 
             bg-white
             rotate-[170deg]
@@ -239,46 +275,53 @@ function MainSection() {
         />
       </div>
 
-      {/* ================= HEADING ================= */}
+      {/* ================= CONTENT (flow on small screens, absolute on xl) ================= */}
       <div
         className="
-          absolute
-          z-10
+          relative
+          z-20
 
-          top-[175px]
-          left-[5%]
+          w-full
+          px-5
+          pt-[315px]
+          pb-8
 
-          w-[90%]
+          sm:px-8
+          sm:pt-[430px]
 
-          sm:top-[175px]
-          sm:left-[5%]
-          sm:w-[65%]
+          md:px-12
+          md:pt-[545px]
 
-          md:top-[185px]
-          md:left-[5%]
-          md:w-[65%]
+          lg:px-16
+          lg:pt-[230px]
 
-          lg:top-[30%]
-          lg:left-[5%]
-          lg:w-auto
+          xl:static
+          xl:block
+          xl:p-0
         "
       >
+        {/* ================= HEADING ================= */}
         <h1
           className="
+            relative
+            xl:absolute
+
             font-bold
             text-white
 
-            text-[32px]
-            leading-[40px]
+            text-[27px]
+            leading-[34px]
 
-            sm:text-[24px]
-            sm:leading-[47px]
+            sm:text-[36px]
+            sm:leading-[43px]
 
             md:text-[44px]
-            md:leading-[54px]
+            md:leading-[52px]
 
-            lg:text-[50px]
-            lg:leading-[64px]
+            xl:top-[30%]
+            xl:left-[5%]
+            xl:text-[50px]
+            xl:leading-[64px]
 
             text-shadow-[3px_4px_5px_rgba(0,0,0,0.6)]
           "
@@ -287,195 +330,192 @@ function MainSection() {
           <br />
           you what it's actually worth
         </h1>
-      </div>
 
-      {/* ================= SEARCH ================= */}
-      <div
-        className="
-          absolute
-          z-20
-
-          top-[340px]
-          left-[5%]
-
-          w-[90%]
-          h-[52px]
-
-          sm:top-[269px]
-          sm:left-[5%]
-          sm:w-[52%]
-          sm:h-[54px]
-
-          md:top-[365px]
-          md:left-[5%]
-          md:w-[72%]
-          md:h-[55px]
-
-          lg:top-[330px]
-          lg:left-[70px]
-          lg:w-[680px]
-          lg:h-[55px]
-
-          bg-white
-          rounded-[10px]
-        "
-      >
-        {/* Search Icon */}
-        <img
-          src={Search}
-          alt="Search"
+        {/* ================= SEARCH ================= */}
+        <div
           className="
-            absolute
+            relative
+            mt-6
+            w-full
 
-            left-[15px]
-            top-[14px]
+            lg:max-w-[620px]
 
-            w-[23px]
-            h-[23px]
-          "
-        />
-
-        {/* Placeholder */}
-        <p
-          className="
-            absolute
-
-            left-[48px]
-            top-[15px]
-
-            text-[#9593A2]
-
-            text-[13px]
-
-            sm:text-[14px]
-            md:text-[15px]
+            xl:absolute
+            xl:mt-0
+            xl:top-[330px]
+            xl:left-[70px]
+            xl:w-[680px]
+            xl:max-w-none
           "
         >
-          Search Property...
-        </p>
+          <div
+            className="
+              relative
+              w-full
+              h-[52px]
 
-        {/* Search Button */}
-        <Button
+              md:h-[55px]
+
+              xl:h-[55px]
+
+              bg-white
+              rounded-[10px]
+            "
+          >
+            {/* Search Icon */}
+            <img
+              src={Search}
+              alt="Search"
+              className="
+                absolute
+
+                left-[15px]
+                top-[14px]
+
+                w-[23px]
+                h-[23px]
+              "
+            />
+
+            {/* Placeholder */}
+            <p
+              className="
+                absolute
+
+                left-[48px]
+                top-[15px]
+
+                text-[#9593A2]
+
+                text-[13px]
+
+                sm:text-[14px]
+                xl:text-[15px]
+              "
+            >
+              Search Property...
+            </p>
+
+            {/* Search Button */}
+            <Button
+              className="
+                absolute
+
+                right-[5px]
+                top-[4px]
+
+                w-[110px]
+                h-[44px]
+
+                sm:w-[125px]
+                sm:h-[46px]
+
+                md:w-[140px]
+
+                xl:w-[163px]
+                xl:h-[45px]
+
+                bg-gradient-to-r
+                from-[#003F79]
+                to-[#00ACDB]
+
+                rounded-[8px]
+                text-white
+
+                text-[14px]
+                sm:text-[15px]
+                xl:text-[16px]
+              "
+            >
+              Search
+            </Button>
+          </div>
+
+          {/* Download Text */}
+          <p
+            className="
+              relative
+              mt-2
+              pr-1
+
+              xl:absolute
+              xl:mt-0
+              xl:top-[68px]
+              xl:left-[2px]
+              xl:pr-0
+
+              whitespace-normal
+              min-[360px]:whitespace-nowrap
+
+              font-semibold
+
+              text-[15px]
+              leading-[22px]
+
+              sm:text-[17px]
+              sm:leading-[26px]
+
+              md:text-[24px]
+              md:leading-[30px]
+
+              xl:text-[28px]
+              xl:leading-[100%]
+
+              text-white
+
+              drop-shadow-[0_4px_6px_rgba(0,0,0,0.33)]
+
+              [-webkit-text-stroke:1px_rgba(0,0,0,1)]
+            "
+          >
+            Download it.Use it.Pay when it makes sense.
+          </p>
+        </div>
+
+        {/* ================= APP BUTTONS ================= */}
+        <div
           className="
-            absolute
-
-            right-[5px]
-            top-[4px]
-
-            w-[110px]
-            h-[44px]
-
-            sm:w-[125px]
-            sm:h-[46px]
-
-            md:w-[140px]
-
-            lg:w-[163px]
-            lg:h-[45px]
-
-            bg-gradient-to-r
-            from-[#003F79]
-            to-[#00ACDB]
-
-            rounded-[8px]
-            text-white
-
-            text-[14px]
-            sm:text-[15px]
-            md:text-[16px]
-          "
-        >
-          Search
-        </Button>
-
-        {/* Download Text */}
-        <p
-          className="
-            absolute
-
-            left-[2px]
-            top-[68px]
-
-            whitespace-nowrap
-
-            font-semibold
-
-            text-[18px]
-            leading-[25px]
-
-            sm:text-[16px]
-            sm:leading-[28px]
-
-            md:text-[24px]
-            md:leading-[30px]
-
-            lg:text-[28px]
-            lg:leading-[100%]
-
-            text-white
-
-            drop-shadow-[0_4px_6px_rgba(0,0,0,0.33)]
-
-            [-webkit-text-stroke:1px_rgba(0,0,0,1)]
-          "
-        >
-          Download it.Use it.Pay when it makes sense.
-        </p>
-      </div>
-
-      {/* ================= APP BUTTONS ================= */}
-      <div
-        className="
-          absolute
-          z-20
-
-          left-[5%]
-          top-[470px]
-
-          w-[280px]
-          h-[52px]
-
-          sm:left-[5%]
-          sm:top-[368px]
-          sm:w-[300px]
-          sm:h-[54px]
-
-          md:left-[5%]
-          md:top-[500px]
-          md:w-[315px]
-          md:h-[56px]
-
-          lg:left-[73px]
-          lg:top-[460px]
-          lg:w-[322px]
-          lg:h-[58px]
-
-          bg-white
-          rounded-[13px]
-        "
-      >
-        <img
-          src={Group}
-          alt="Group"
-          className="
-            absolute
-
-            top-[4px]
-            left-[3px]
+            relative
+            mt-8
 
             w-[274px]
-            h-[44px]
+            max-w-full
 
-            sm:w-[292px]
-            sm:h-[46px]
+            bg-white
+            rounded-[13px]
 
-            md:w-[307px]
-            md:h-[48px]
-
-            lg:w-[314px]
-            lg:h-[49px]
+            xl:absolute
+            xl:mt-0
+            xl:left-[73px]
+            xl:top-[460px]
+            xl:w-[322px]
+            xl:h-[58px]
+            xl:max-w-none
           "
-        />
+        >
+          <img
+            src={Group}
+            alt="Group"
+            className="
+              relative
+              left-[3px]
+              top-[4px]
+
+              w-[274px]
+              h-[44px]
+
+              sm:w-[292px]
+              sm:h-[46px]
+
+              md:w-[307px]
+              md:h-[48px]
+
+              xl:absolute
+              xl:w-[314px]
+              xl:h-[49px]
+            "
+          />
+        </div>
       </div>
     </section>
   );

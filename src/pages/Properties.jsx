@@ -82,28 +82,28 @@ function Properties() {
   ];
 
   return (
-    <div className="relative bg-[#F3F6F9] top-[450px] min-h-[1100px] py-10 px-4">
+    <div className="relative bg-[#F3F6F9] min-h-0 py-10 px-4 xl:top-[450px] xl:min-h-[1100px] xl:py-10">
       <div className="max-w-6xl mx-auto">
         {/* Heading Section */}
-        <div className="flex items-center justify-center gap-2 text-[32px] font-semibold mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 text-[24px] sm:text-[28px] xl:text-[32px] font-semibold mb-8 sm:mb-10 xl:mb-12">
           <span className="text-[#575665]">New</span>
           <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
             Properties
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 xl:gap-8 justify-items-center">
           {propertiesData.map((item) => (
             <div
               key={item.id}
-              className="bg-white h-[400px] w-full rounded-[10px] shadow-lg  p-2 flex flex-col justify-between "
+              className="bg-white w-full sm:max-w-[360px] xl:max-w-none rounded-[10px] shadow-lg p-2 flex flex-col justify-between xl:h-[400px]"
             >
               <div className="relative">
                 <div className="relative">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-48 object-cover rounded-[10px]"
+                    className="w-full h-44 object-cover rounded-[10px] sm:h-48"
                   />
 
                   <div
@@ -114,7 +114,7 @@ function Properties() {
                     }}
                   ></div>
                 </div>
-                <div className="absolute left-[12px] top-[210px]">
+                <div className="mt-3 xl:absolute xl:left-[12px] xl:top-[210px] xl:mt-0">
                   <span className="text-[15px] font-bold tracking-wider bg-gradient-to-r from-[#C830EB] to-[#00ACDB] bg-clip-text text-transparent">
                     {item.tag}
                   </span>
@@ -122,41 +122,62 @@ function Properties() {
                     {item.title}
                   </h3>
 
-                  <div className="flex items-center gap-4 text-xs text-[#6B747B] my-2">
+                  <div className="flex items-center gap-3 text-xs text-[#6B747B] my-2 sm:gap-4 xl:gap-4">
                     <div className="flex items-center gap-1">
-                      <img src={Bed} />
+                      <img src={Bed} alt="Beds" className="w-[14px] h-[14px]" />
                       <span> {item.beds}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <img src={Icon} />
+                      <img
+                        src={Icon}
+                        alt="Baths"
+                        className="w-[14px] h-[14px]"
+                      />
                       <span> {item.baths}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <img src={TableBed} />
+                      <img
+                        src={TableBed}
+                        alt="Sqft"
+                        className="w-[14px] h-[14px]"
+                      />
                       <span> {item.sqft}</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-1 text-xs text-[#6B747B] truncate">
-                    <img src={Map} />
+                    <img
+                      src={Map}
+                      alt="Location"
+                      className="w-[16px] h-[16px] shrink-0"
+                    />
                     {item.address}
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between relative">
-                <Button className="absolute top-[-50px] left-[12px] h-[40px] w-[150px] rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white">
+              <div className="mt-4 flex items-center justify-between gap-3 xl:mt-0 xl:relative xl:justify-start">
+                <Button className="h-[40px] w-[150px] shrink-0 rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white xl:absolute xl:top-[-50px] xl:left-[12px]">
                   View Details
                 </Button>
-                <span className="text-[#575665] font-semibold absolute top-[-40px] left-[260px]">
-                  <img src={Dollar} className="absolute left-[-25px]" />
+                <span className="text-[#575665] font-semibold flex items-center gap-1 xl:absolute xl:top-[-40px] xl:left-[260px]">
+                  <img
+                    src={Dollar}
+                    alt="Price"
+                    className="w-[16px] h-[16px] xl:absolute xl:left-[-25px] xl:w-auto xl:h-auto"
+                  />
                   {item.price}
                 </span>
               </div>
             </div>
           ))}
         </div>
+        <div className="mt-8 flex justify-center xl:hidden">
+          <Button className="h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB]">
+            See More
+          </Button>
+        </div>
       </div>
-      <Button className="absolute top-[1020px] left-1/2 -translate-x-1/2 h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB] ">
+      <Button className="hidden xl:block absolute top-[1020px] left-1/2 -translate-x-1/2 h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB] ">
         See More
       </Button>
     </div>

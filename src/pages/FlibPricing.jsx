@@ -50,7 +50,7 @@ function FlibPricing() {
 
   return (
     <div
-      className="relative  top-[450px] min-h-[550px] py-16 px-4"
+      className="relative min-h-0 py-10 px-4 sm:py-14 xl:top-[450px] xl:min-h-[550px] xl:py-16"
       style={{
         background:
           "linear-gradient(90deg, rgba(200,48,235,0.3) 0%, rgba(0,172,219,0.2592) 0%, rgba(0,172,219,0) 100%)",
@@ -58,39 +58,44 @@ function FlibPricing() {
     >
       <div className="max-w-6xl mx-auto">
         {/* Header Title Section */}
-        <div className="flex items-center justify-center gap-2 text-[32px] font-semibold mb-16">
+        <div className="flex flex-wrap items-center justify-center gap-2 text-center text-[24px] sm:text-[28px] xl:text-[32px] font-semibold mb-10 sm:mb-14 xl:mb-16">
           <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
             FlippBidd
           </span>
           <span className="text-[#575665]">Pricing & Plans</span>
         </div>
-        <div className="relative">
+
+        {/* 7-DAY TRIAL badge — inline on small screens, absolute above card 2 on xl */}
+        <div className="relative mb-6 flex justify-center xl:mb-0 xl:h-0">
           <div
-            className="absolute bg-[#0AA6DC6B] top-[-26px] left-[580px] h-[50px] w-[50px]"
+            className="hidden xl:block absolute bg-[#0AA6DC6B] top-[-26px] left-[580px] h-[50px] w-[50px]"
             style={{
               clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)",
             }}
           ></div>
           <div
-            className="absolute top-[-25px] left-[405px] bg-gradient-to-r from-[#AF16CD] to-[#00ACDB] h-[45px] w-[200px] z-3 rounded-tl-2xl flex items-center"
+            className="relative xl:absolute xl:top-[-25px] xl:left-[405px] bg-gradient-to-r from-[#AF16CD] to-[#00ACDB] h-[40px] w-[200px] z-3 rounded-tl-2xl flex items-center xl:h-[45px]"
             style={{
               clipPath: "polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
             }}
           >
-            <p className="ml-3 text-white font-semibold"> GET A 7-DAY TRIAL </p>
+            <p className="ml-3 text-white font-semibold text-[12px] sm:text-[14px] xl:text-[16px]">
+              GET A 7-DAY TRIAL
+            </p>
           </div>
         </div>
+
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 xl:gap-8 justify-items-center ">
           {pricingPlans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative bg-white w-[340px] rounded-2xl shadow-md overflow-hidden flex flex-col`}
+              className={`relative bg-white w-full max-w-[340px] rounded-2xl shadow-md overflow-hidden flex flex-col`}
             >
-              <div className="p-8 flex-1 flex flex-col ">
+              <div className="p-6 sm:p-8 flex-1 flex flex-col ">
                 <div className="mb-6">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-3xl font-extrabold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
+                    <span className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
                       {plan.price}
                     </span>
                     <span className="text-xs font-semibold text-[#00ACDB]">
@@ -108,7 +113,11 @@ function FlibPricing() {
                       key={index}
                       className="flex items-center gap-3 text-sm text-[#2B3842]"
                     >
-                      <img src={TickIcon} alt="TickIcon Img" />
+                      <img
+                        src={TickIcon}
+                        alt="TickIcon Img"
+                        className="shrink-0"
+                      />
                       <span>{feature}</span>
                     </li>
                   ))}

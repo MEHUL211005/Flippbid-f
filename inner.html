@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>probe-inner</title>
+    <style>body{margin:0;background:#fff}</style>
+  </head>
+  <body style="margin:0">
+    <div id="root"></div>
+    <script type="module">
+      import React from 'react';
+      import { createRoot } from 'react-dom/client';
+      import '/src/index.css';
+      import Investor from '/src/pages/Investor.jsx';
+      createRoot(document.getElementById('root')).render(React.createElement(Investor));
+
+      var DEBUG = location.search.indexOf('debug') !== -1;
+      var tries = 0;
+      function attempt() {
+        tries++;
+        var section = [].slice.call(document.querySelectorAll('section')).filter(function (s) { return s.className.indexOf('A6F0F7') !== -1; })[0];
+        var town = section && section.querySelector('div[style*="TownImg"]');
+        if ((!section || !town) && tries < 60) { return setTimeout(attempt, 150); }
+        var r = function (el) {
+          if (!el) return null;
+          var b = el.getBoundingClientRect();
+          return [Math.round(b.left), Math.round(b.top), Math.round(b.right), Math.round(b.bottom), Math.round(b.width), Math.round(b.height)];
+        };
+        var rel = function (el, base) {
+          var e = r(el); var b = r(base);
+          if (!e || !b) return null;
+          return [e[0]-b[0], e[1]-b[1], e[2]-b[0], e[3]-b[1], e[4], e[5]];
+        };
+        var ov = function (a, b) {
+          if (!a || !b) return 0;
+          var x = Math.min(a[2], b[2]) - Math.max(a[0], b[0]);
+          var y = Math.min(a[3], b[3]) - Math.max(a[1], b[1]);
+          return (x > 0 && y > 0) ? Math.round(x) + 'x' + Math.round(y) : 0;
+        };
+        var imgs = [].slice.call(document.querySelectorAll('img'));
+        var line1 = imgs.filter(function (i) { return (i.getAttribute('alt') || '') === 'Line1 Icon'; })[0];
+        var line2 = imgs.filter(function (i) { return (i.getAttribute('alt') || '') === 'Line2 Icon'; })[0];
+        var cardEls = [].slice.call(section.querySelectorAll('h4')).map(function (h) {
+          return { name: h.textContent.trim(), el: h.closest('div.absolute') };
+        });
+        if (DEBUG) {
+          town.style.backgroundImage = 'none';
+          town.style.backgroundColor = '#000';
+          cardEls.forEach(function (c) {
+            c.el.style.opacity = '0.15';
+            c.el.style.outline = '2px solid #00ff00';
+          });
+          var wc = [].slice.call(section.querySelectorAll('div')).filter(function (d) { return d.className.indexOf('bg-white') !== -1 && d.querySelector('button'); })[0];
+          if (wc) wc.style.display = 'none';
+        }
+        var tRect = r(town);
+        var insideTown = function (el) {
+          var e = r(el);
+          return e && e[0] >= tRect[0] - 1 && e[2] <= tRect[2] + 1 && e[1] >= tRect[1] - 1 && e[3] <= tRect[3] + 1;
+        };
+        var out = { vw: window.innerWidth, sectionH: r(section)[5], town: rel(town, section) };
+        out.lines = [ 'L1', rel(line1, town), 'L2', rel(line2, town) ];
+        out.cards = cardEls.map(function (c) {
+          var cr = rel(c.el, town);
+          return [c.name, cr, 'inTown:' + insideTown(c.el), 'ovL1:' + ov(cr, rel(line1, town)), 'ovL2:' + ov(cr, rel(line2, town))];
+        });
+        var d = document.createElement('pre');
+        d.id = 'MEASURE';
+        d.textContent = JSON.stringify(out);
+        if (!DEBUG) { document.body.appendChild(d); }
+      }
+      attempt();
+    </script>
+  </body>
+</html>

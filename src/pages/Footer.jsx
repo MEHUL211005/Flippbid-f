@@ -17,53 +17,53 @@ import Button from "../Component/Button";
 import BuildingImg from "../assets/Building.png";
 function Footer() {
   return (
-    <div className="h-[800px] w-full relative overflow-hidden">
+    <div className="w-full relative overflow-hidden">
       <div
-        className="relative h-[400px] bg-red-600 bg-cover bg-center"
+        className="relative h-[300px] sm:h-[360px] bg-red-600 bg-cover bg-center xl:h-[400px]"
         style={{
           backgroundImage: `url(${FotterImg})`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#001014]/20 to-[#003F79]/80"></div>
-        <div className="absolute inset-0  flex flex-col items-center justify-center gap-5">
-          <p className="text-[35px] font-bold text-white">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 sm:gap-5 px-5 text-center">
+          <p className="text-[22px] sm:text-[28px] xl:text-[35px] font-bold text-white">
             Available Now on AppStore & GooglePlay
           </p>
-          <p className="font-semibold text-white text-[15px]">
+          <p className="font-semibold text-white text-[13px] sm:text-[15px]">
             WebApp Package Coming Spring 2025!
           </p>
           <div className="flex gap-4">
             <img
               src={AppStone}
               alt="AppStone Icon"
-              className=" object-cover rounded-[10px]"
+              className="w-[150px] sm:w-auto object-cover rounded-[10px]"
             />
             <img
               src={Play}
               alt="Play Icon"
-              className=" object-cover rounded-[10px]"
+              className="w-[150px] sm:w-auto object-cover rounded-[10px]"
             />
           </div>
         </div>
       </div>
       {/* Footer Start Here */}
-      <div className="relative">
+      <div className="relative hidden xl:block">
         <img
           src={BuildingImg}
           alt="BuildingImg"
           className="h-[400px] absolute top-[-3px] left-[830px]  opacity-[30%]"
         />
       </div>
-      <div className="bg-[#002241] text-white h-[400px] w-full px-30 py-10 flex flex-col justify-evenly">
+      <div className="bg-[#002241] text-white w-full px-5 sm:px-8 xl:px-30 py-10 xl:h-[400px] xl:py-10 flex flex-col justify-evenly gap-8 xl:gap-0">
         {/* Top Content Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 xl:gap-0">
           {/* Column 1: Logo & Description */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <img
                 src={FotterIcon}
                 alt="FotterIcon"
-                className=" object-cover rounded-[10px]"
+                className="object-cover rounded-[10px]"
               />
             </div>
             <div className="">
@@ -92,36 +92,36 @@ function Footer() {
               <div className="w-8 h-8 rounded-full bg-[#003F79] flex items-center justify-center cursor-pointer hover:opacity-80">
                 <img
                   src={FaceBook}
-                  alt="Play Icon"
-                  className=" object-cover rounded-[10px]"
+                  alt="Facebook Icon"
+                  className="object-cover rounded-[10px]"
                 />
               </div>
               <div className="w-8 h-8 rounded-full bg-[#003F79] flex items-center justify-center cursor-pointer hover:opacity-80">
                 <img
                   src={Linkdin}
-                  alt="Play Icon"
-                  className=" object-cover rounded-[10px]"
+                  alt="Linkdin Icon"
+                  className="object-cover rounded-[10px]"
                 />
               </div>
               <div className="w-8 h-8 rounded-full bg-[#003F79] flex items-center justify-center cursor-pointer hover:opacity-80">
                 <img
                   src={Instagram}
                   alt="Instagram Icon"
-                  className=" object-cover rounded-[10px]"
+                  className="object-cover rounded-[10px]"
                 />
               </div>
               <div className="w-8 h-8 rounded-full bg-[#003F79] flex items-center justify-center cursor-pointer hover:opacity-80">
                 <img
                   src={youTube}
                   alt="youTube Icon"
-                  className=" object-cover rounded-[10px]"
+                  className="object-cover rounded-[10px]"
                 />
               </div>
               <div className="w-8 h-8 rounded-full bg-[#003F79] flex items-center justify-center cursor-pointer hover:opacity-80">
                 <img
                   src={Video}
                   alt="Video Icon"
-                  className=" object-cover rounded-[10px]"
+                  className="object-cover rounded-[10px]"
                 />
               </div>
             </div>
@@ -155,28 +155,30 @@ function Footer() {
               <img
                 src={MapImg}
                 alt="MapImg Icon"
-                className=" object-cover rounded-[10px]"
+                className="w-[18px] h-[18px] xl:w-[24px] xl:h-[24px] object-cover rounded-[10px] shrink-0"
               />
               New York, NY
             </p>
-            <p className="text-xs text-gray-300 flex items-center gap-2 truncate">
+            <div className="text-xs text-gray-300 flex items-start gap-3 text-[14px]">
               <img
                 src={Calender}
                 alt="Calender Icon"
-                className=" object-cover rounded-[10px]"
+                className="w-[18px] h-[18px] object-cover rounded-[10px] shrink-0 xl:w-[24px] xl:h-[24px]"
               />
-              <p className="absolute top-[75px] left-[35px] text-[14px]">
-                https://calendly.com/flippbidd/{" "}
-              </p>
-              <p className="absolute top-[90px] left-[35px] text-[14px]">
-                flippbidd-network-intro-demo
-              </p>
-            </p>
+              <div className="break-words xl:absolute xl:left-[35px] xl:top-[75px] xl:w-[300px]">
+                <p className="xl:absolute xl:top-0">
+                  https://calendly.com/flippbidd/{" "}
+                </p>
+                <p className="xl:absolute xl:top-[15px]">
+                  flippbidd-network-intro-demo
+                </p>
+              </div>
+            </div>
             <p className="text-xs text-gray-300 flex items-center text-[14px] gap-5">
               <img
                 src={MobileImg}
                 alt="MobileImg Icon"
-                className=" object-cover rounded-[10px]"
+                className="w-[18px] h-[18px] object-cover rounded-[10px] shrink-0"
               />
               +1 376-688-3298
             </p>
@@ -192,31 +194,31 @@ function Footer() {
               <input
                 type="email"
                 placeholder="Enter Your Email"
-                className="w-full text-xs px-2 text-black outline-none bg-transparent"
+                className="w-full min-w-0 text-xs px-2 text-black outline-none bg-transparent"
               />
-              <Button className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white text-xs px-4 py-2 rounded-md font-medium hover:bg-[#005f87] transition-colors">
+              <Button className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white text-xs px-4 py-2 rounded-md font-medium hover:bg-[#005f87] transition-colors shrink-0">
                 Send
               </Button>
             </div>
-            <div className="flex gap-2 h-[40px]">
+            <div className="flex flex-wrap gap-2 h-[40px]">
               <img
                 src={AppFotter}
                 alt="AppFotter Icon"
-                className=" object-cover rounded-[10px] h-[40px] w-auto max-w-[139px]"
+                className="object-cover rounded-[10px] h-[40px] w-auto max-w-[139px]"
               />
               <img
                 src={GoogleFotter}
                 alt="GoogleFotter Icon"
-                className=" object-contain rounded-[10px] h-[40px] w-auto shrink-0"
+                className="object-contain rounded-[10px] h-[40px] w-auto max-w-[130px] xl:max-w-none shrink-0"
               />
             </div>
           </div>
         </div>
 
         {/* Bottom Bar Section */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-[12px] text-gray-400 relative ">
+        <div className="border-t border-gray-800 pt-8 flex flex-col lg:flex-row items-center justify-between gap-3 text-[12px] text-gray-400 relative ">
           <p>© Copyright 2025 FlippBidd App</p>
-          <div className="flex gap-4  md:mt-0 absolute left-[190px]">
+          <div className="flex flex-wrap justify-center gap-2 xl:gap-4 mt-2 xl:mt-0 xl:absolute xl:left-[190px]">
             <span>|</span>
             <a href="#">
               Terms & Conditions
@@ -230,7 +232,7 @@ function Footer() {
               Cancellation & Refund Policy
             </a>
           </div>
-          <div className="flex gap-4 mt-2 md:mt-0">
+          <div className="flex gap-4 mt-2 xl:mt-0">
             <a href="#">
               Contact Sales
             </a>
