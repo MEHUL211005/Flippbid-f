@@ -65,33 +65,31 @@ function FlibPricing() {
           <span className="text-[#575665]">Pricing & Plans</span>
         </div>
 
-        {/* 7-DAY TRIAL badge — inline on small screens, absolute above card 2 on xl */}
-        <div className="relative mb-6 flex justify-center xl:mb-0 xl:h-0">
-          <div
-            className="hidden xl:block absolute bg-[#0AA6DC6B] top-[-26px] left-[580px] h-[50px] w-[50px]"
-            style={{
-              clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)",
-            }}
-          ></div>
-          <div
-            className="relative xl:absolute xl:top-[-25px] xl:left-[405px] bg-gradient-to-r from-[#AF16CD] to-[#00ACDB] h-[40px] w-[200px] z-3 rounded-tl-2xl flex items-center xl:h-[45px]"
-            style={{
-              clipPath: "polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
-            }}
-          >
-            <p className="ml-3 text-white font-semibold text-[12px] sm:text-[14px] xl:text-[16px]">
-              GET A 7-DAY TRIAL
-            </p>
-          </div>
-        </div>
-
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 xl:gap-8 justify-items-center ">
+        <div className="grid grid-cols-1 justify-items-center gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-x-7 sm:gap-y-7 lg:grid-cols-3 xl:gap-x-8 xl:gap-y-8">
           {pricingPlans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative bg-white w-full max-w-[340px] rounded-2xl shadow-md overflow-hidden flex flex-col`}
+              className="relative flex w-full max-w-[340px] flex-col rounded-2xl bg-white shadow-md"
             >
+              {plan.badge && (
+                <>
+                  <div
+                    className="absolute -top-[25px] left-[180px] z-[-1] h-[45px] w-[50px] bg-[#0AA6DC6B]"
+                    style={{ clipPath: "polygon(40% 0%, 100% 100%, 0% 100%)" }}
+                  ></div>
+                  <div
+                    className="absolute -top-[25px] left-0  flex h-[45px] w-[200px] items-center rounded-tl-2xl bg-gradient-to-r from-[#AF16CD] to-[#00ACDB]"
+                    style={{
+                      clipPath: "polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
+                    }}
+                  >
+                    <p className="ml-3 text-[12px] font-semibold text-white sm:text-[14px]">
+                      {plan.badge}
+                    </p>
+                  </div>
+                </>
+              )}
               <div className="p-6 sm:p-8 flex-1 flex flex-col ">
                 <div className="mb-6">
                   <div className="flex items-baseline gap-1">

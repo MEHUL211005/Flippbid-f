@@ -19,23 +19,23 @@ function Section3() {
     "National Skiptracing, and More...",
   ];
   return (
-    <div className="relative w-full xl:h-[518px]">
-      <div className="relative w-full px-5 py-12 sm:px-8 xl:h-0 xl:p-0">
+    <div className="relative w-full lg:min-h-[700px] xl:h-[518px]">
+      <div className="relative w-full px-5 py-12 sm:px-8 lg:h-[700px] lg:px-8 lg:py-0 xl:h-0 xl:p-0">
         {/* ============ TITLE ============ */}
         <div className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3 xl:block">
-          <p className="font-semibold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent text-[24px] sm:text-[27px] xl:absolute xl:top-[50px] xl:left-[100px] xl:text-[27px]">
+          <p className="font-semibold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent text-[24px] sm:text-[27px] lg:absolute lg:top-[32px] lg:left-[32px] xl:top-[50px] xl:left-[100px] xl:text-[27px]">
             FlipBidd
           </p>
-          <p className="text-[24px] sm:text-[27px] font-semibold text-[#575665] xl:absolute xl:top-[50px] xl:left-[220px] xl:text-[27px]">
+          <p className="text-[24px] sm:text-[27px] font-semibold text-[#575665] lg:absolute lg:top-[32px] lg:left-[142px] xl:top-[50px] xl:left-[220px] xl:text-[27px]">
             Key
           </p>
-          <p className="text-[20px] sm:text-[25px] font-bold font-semibold text-[#575665] basis-full xl:basis-auto xl:absolute xl:top-[90px] xl:left-[100px] xl:text-[25px]">
+          <p className="text-[20px] sm:text-[25px] font-bold font-semibold text-[#575665] basis-full lg:absolute lg:top-[72px] lg:left-[32px] xl:basis-auto xl:top-[90px] xl:left-[100px] xl:text-[25px]">
             Features
           </p>
         </div>
 
         {/* ============ FEATURE LIST ============ */}
-        <div className="mt-6 flex w-full flex-col gap-3 xl:absolute xl:mt-0 xl:top-[150px] xl:left-[80px] xl:w-[650px] xl:gap-4">
+        <div className="mt-6 flex w-full flex-col gap-3 lg:absolute lg:mt-0 lg:top-[125px] lg:left-[32px] lg:w-[44%] lg:gap-3 xl:top-[150px] xl:left-[80px] xl:w-[650px] xl:gap-4">
           {featuresList.map((item, index) => (
             <div
               key={index}
@@ -54,8 +54,8 @@ function Section3() {
         </div>
 
         {/* ============ ARTWORK ============ */}
-        <div className="relative mt-8 h-[283px] w-full overflow-hidden sm:h-[480px] sm:mt-10 md:h-[565px] md:mt-12 xl:absolute xl:mt-0 xl:left-[620px] xl:top-[150px] xl:h-[565px] xl:w-[615px] xl:overflow-visible">
-          <div className="absolute left-1/2 top-0 w-[615px] h-[565px] -translate-x-1/2 origin-top scale-[0.5] sm:scale-[0.85] md:scale-100 xl:left-0 xl:translate-x-0 xl:scale-100">
+        <div className="relative mt-8 h-[283px] w-full overflow-hidden sm:h-[480px] sm:mt-10 md:h-[565px] md:mt-12 lg:absolute lg:mt-0 lg:top-[125px] lg:right-[60px] lg:h-[430px] lg:w-[44%] lg:overflow-visible xl:left-[620px] xl:right-auto xl:top-[150px] xl:h-[565px] xl:w-[615px]">
+          <div className="absolute left-1/2 top-0 w-[615px] h-[565px] -translate-x-1/2 origin-top scale-[0.5] sm:scale-[0.85] md:scale-100 lg:left-0 lg:translate-x-0 lg:scale-[0.68] xl:scale-100">
             {/* Gradient circle */}
             <div className="rounded-[50%] absolute top-[30px] left-[30px] h-[518px] w-[518px] bg-gradient-to-r from-[#A6F0F7]  to-[#FDE3FA]">
               <div className="bg-black h-[278px] w-[453px] absolute top-[120px] left-[34px] flex items-center justify-center">

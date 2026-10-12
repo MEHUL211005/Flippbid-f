@@ -23,7 +23,7 @@ function MainSection() {
 
         md:min-h-[680px]
 
-        lg:min-h-[720px]
+        lg:min-h-[200px]
 
         xl:h-[calc(100vh-90px)]
         xl:min-h-[640px]
@@ -104,19 +104,14 @@ function MainSection() {
         </p>
       </div>
 
-      {/* ================= BULL ================= */}
-      <img
-        src={Bull}
-        alt="Bull"
+      <div
         className="
           absolute
           z-10
-
           top-[100px]
-          right-[0px]
-
+          right-0
+          aspect-[453/734]
           w-[125px]
-          h-auto
 
           sm:top-[88px]
           sm:right-[8px]
@@ -126,153 +121,118 @@ function MainSection() {
           md:right-[20px]
           md:w-[250px]
 
-          lg:top-[140px]
+          lg:top-[9%]
           lg:right-[60px]
-          lg:w-[260px]
+          lg:w-[330px]
 
-          xl:top-[6%]
+          xl:top-auto
+          xl:bottom-0
           xl:right-[10%]
           xl:w-[350px]
-          xl:h-[550px]
         "
-      />
+      >
+        <img
+          src={Bull}
+          alt="Bull"
+          className="absolute inset-0 h-full w-full object-contain object-bottom"
+        />
 
-      {/* ================= SLOGAN ================= */}
-      <div
-        className="
+        <div
+          className="
           absolute
-          z-20
-
-          top-[104px]
-          left-auto
-          right-[117px]
-
+          z-10
+          top-[15%]
+          right-[93%]
           w-[200px]
           h-[36px]
 
-          sm:top-[96px]
-          sm:right-[195px]
-          sm:left-auto
+          sm:top-[15%]
           sm:w-[275px]
           sm:h-[40px]
-
-          md:top-[132px]
-          md:right-[254px]
+          lg:top-[10%]
+          md:top-[7%]
           md:w-[315px]
           md:h-[44px]
 
-          lg:top-[150px]
-          lg:right-[303px]
-          lg:w-[315px]
-          lg:h-[44px]
-
-          xl:top-[69px]
-          xl:left-[480px]
-          xl:right-auto
-          xl:translate-x-0
+          xl:top-[8%]
           xl:w-[349px]
           xl:h-[44px]
 
           bg-white
           rounded-[50px]
         "
-      >
-        <img
-          src={Vector}
-          alt="Vector"
-          className="
+        >
+          <img
+            src={Vector}
+            alt="Vector"
+            className="
             absolute
-
             left-[6px]
             top-[10px]
-
             w-[16px]
             h-[16px]
-
             sm:left-[12px]
             sm:top-[10px]
             sm:w-[20px]
             sm:h-[19px]
-
             md:w-[22px]
             md:h-[20px]
           "
-        />
+          />
 
-        <p
-          className="
+          <p
+            className="
             absolute
-
             left-[28px]
             top-[10px]
             right-[28px]
-
             sm:left-[42px]
             sm:right-[40px]
-
             md:left-[45px]
             md:right-[40px]
-
             whitespace-nowrap
             overflow-hidden
             text-ellipsis
-
             bg-gradient-to-r
             from-[#003F79]
             to-[#00ACDB]
-
             bg-clip-text
             text-transparent
-
             font-semibold
             font-alkatra
-
             text-[9px]
-
             sm:text-[12px]
             md:text-[14px]
           "
-        >
-          Just Real State Investments...No Bull
-        </p>
+          >
+            Just Real State Investments...No Bull
+          </p>
 
-        {/* Triangle */}
-        <div
-          className="
+          <div
+            className="
             absolute
-
             right-[2px]
             top-[9px]
-
             w-[28px]
             h-[32px]
-
             sm:right-[2px]
             sm:top-[12px]
             sm:w-[34px]
             sm:h-[38px]
-
             md:right-[2px]
             md:top-[13px]
             md:w-[38px]
             md:h-[42px]
-
-            lg:right-[2px]
-            lg:top-[13px]
-
-            xl:left-[303px]
-            xl:right-auto
-            xl:top-[25px]
             xl:w-[39px]
             xl:h-[45px]
-
             bg-white
             rotate-[170deg]
           "
-          style={{
-            clipPath: "polygon(0 0, 100% 100%, 0 100%)",
-          }}
-        />
+            style={{
+              clipPath: "polygon(0 0, 100% 100%, 0 100%)",
+            }}
+          />
+        </div>
       </div>
 
       {/* ================= CONTENT (flow on small screens, absolute on xl) ================= */}
@@ -409,6 +369,7 @@ function MainSection() {
 
                 sm:w-[125px]
                 sm:h-[46px]
+                sm:top-[4px]
 
                 md:w-[140px]
 
@@ -478,11 +439,21 @@ function MainSection() {
             relative
             mt-8
 
-            w-[274px]
+            flex
+            h-[52px]
+            w-[280px]
             max-w-full
+            items-center
+            justify-center
 
             bg-white
             rounded-[13px]
+
+            sm:h-[54px]
+            sm:w-[298px]
+
+            md:h-[56px]
+            md:w-[313px]
 
             xl:absolute
             xl:mt-0
@@ -497,12 +468,10 @@ function MainSection() {
             src={Group}
             alt="Group"
             className="
-              relative
-              left-[3px]
-              top-[4px]
-
               w-[274px]
               h-[44px]
+              max-w-full
+              object-contain
 
               sm:w-[292px]
               sm:h-[46px]
@@ -510,7 +479,6 @@ function MainSection() {
               md:w-[307px]
               md:h-[48px]
 
-              xl:absolute
               xl:w-[314px]
               xl:h-[49px]
             "

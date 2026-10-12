@@ -56,7 +56,7 @@ function Footer() {
       </div>
       <div className="bg-[#002241] text-white w-full px-5 sm:px-8 xl:px-30 py-10 xl:h-[400px] xl:py-10 flex flex-col justify-evenly gap-8 xl:gap-0">
         {/* Top Content Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 xl:gap-0">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 xl:gap-0">
           {/* Column 1: Logo & Description */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
@@ -200,7 +200,7 @@ function Footer() {
                 Send
               </Button>
             </div>
-            <div className="flex flex-wrap gap-2 h-[40px]">
+            <div className="flex flex-wrap items-center gap-2">
               <img
                 src={AppFotter}
                 alt="AppFotter Icon"
@@ -220,26 +220,16 @@ function Footer() {
           <p>© Copyright 2025 FlippBidd App</p>
           <div className="flex flex-wrap justify-center gap-2 xl:gap-4 mt-2 xl:mt-0 xl:absolute xl:left-[190px]">
             <span>|</span>
-            <a href="#">
-              Terms & Conditions
-            </a>
+            <a href="#">Terms & Conditions</a>
             <span>|</span>
-            <a href="#">
-              Privacy policy
-            </a>
+            <a href="#">Privacy policy</a>
             <span>|</span>
-            <a href="#">
-              Cancellation & Refund Policy
-            </a>
+            <a href="#">Cancellation & Refund Policy</a>
           </div>
           <div className="flex gap-4 mt-2 xl:mt-0">
-            <a href="#">
-              Contact Sales
-            </a>
+            <a href="#">Contact Sales</a>
             <span>|</span>
-            <a href="#">
-              Contact Support
-            </a>
+            <a href="#">Contact Support</a>
           </div>
         </div>
       </div>
