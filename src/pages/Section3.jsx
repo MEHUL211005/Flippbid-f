@@ -22,7 +22,7 @@ function Section3() {
     <div className="relative w-full lg:min-h-[700px] xl:h-[518px]">
       <div className="relative w-full px-5 py-12 sm:px-8 lg:h-[700px] lg:px-8 lg:py-0 xl:h-0 xl:p-0">
         {/* ============ TITLE ============ */}
-        <div className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3 xl:block">
+        <div className="flex flex-wrap items-baseline justify-center gap-x-2 text-center sm:gap-x-3 lg:justify-start lg:text-left xl:block">
           <p className="font-semibold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent text-[24px] sm:text-[27px] lg:absolute lg:top-[32px] lg:left-[32px] xl:top-[50px] xl:left-[100px] xl:text-[27px]">
             FlipBidd
           </p>
@@ -35,7 +35,7 @@ function Section3() {
         </div>
 
         {/* ============ FEATURE LIST ============ */}
-        <div className="mt-6 flex w-full flex-col gap-3 lg:absolute lg:mt-0 lg:top-[125px] lg:left-[32px] lg:w-[44%] lg:gap-3 xl:top-[150px] xl:left-[80px] xl:w-[650px] xl:gap-4">
+        <div className="mx-auto mt-6 flex w-full max-w-[450px] flex-col gap-3 lg:absolute lg:mx-0 lg:mt-0 lg:top-[125px] lg:left-[32px] lg:w-[44%] lg:max-w-none lg:gap-3 xl:top-[150px] xl:left-[80px] xl:w-[650px] xl:gap-4">
           {featuresList.map((item, index) => (
             <div
               key={index}

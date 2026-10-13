@@ -1,7 +1,7 @@
 import React from "react";
 import BlurTick from "../assets/BlueTick.png";
 import MapIng from "../assets/MapImg.png";
-import SerachIcon from "../assets/searchIcon.png"
+import SerachIcon from "../assets/searchIcon.png";
 function PolygonLead() {
   // Features data array jaisa screenshot mein diya gaya hai
   const featuresList = [
@@ -20,8 +20,8 @@ function PolygonLead() {
   return (
     <div className="relative w-full xl:h-[430px] xl:top-[320px]">
       <div className="relative w-full px-5 py-12 sm:px-8 xl:h-0 xl:p-0">
-        <div className="xl:absolute xl:left-[100px]">
-          <div className="flex flex-wrap items-center gap-2 text-[24px] sm:text-[28px] xl:text-[32px] font-semibold">
+        <div className="flex justify-center text-center xl:absolute xl:left-[100px] xl:justify-start xl:text-left">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-[24px] sm:text-[28px] xl:justify-start xl:text-[32px] font-semibold">
             <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
               Polygon
             </span>
@@ -29,7 +29,7 @@ function PolygonLead() {
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full xl:absolute xl:mt-0 xl:top-[50px] xl:left-[80px] xl:gap-4 xl:w-[620px]">
+        <div className="mx-auto mt-6 grid w-full max-w-[620px] grid-cols-1 gap-3 sm:grid-cols-2 xl:absolute xl:mx-0 xl:mt-0 xl:top-[50px] xl:left-[80px] xl:gap-4 xl:w-[620px]">
           {featuresList.map((item, index) => (
             <div
               key={index}
@@ -47,7 +47,7 @@ function PolygonLead() {
           ))}
         </div>
 
-        <div className="relative mt-8 w-full max-w-[430px] xl:absolute xl:mt-0 xl:top-[20px] xl:left-[790px] xl:max-w-none xl:w-[430px] xl:h-[430px]">
+        <div className="relative mx-auto mt-8 w-full max-w-[430px] xl:absolute xl:mx-0 xl:mt-0 xl:top-[20px] xl:left-[790px] xl:max-w-none xl:w-[430px] xl:h-[430px]">
           <div
             className="relative w-full aspect-square bg-cover bg-center bg-no-repeat rounded-[24px] sm:rounded-[30px] xl:rounded-[37px]"
             style={{ backgroundImage: `url(${MapIng})` }}

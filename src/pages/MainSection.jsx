@@ -141,16 +141,16 @@ function MainSection() {
           className="
           absolute
           z-10
-          top-[15%]
-          right-[93%]
+          top-[1%]
+          right-[100%]
           w-[200px]
           h-[36px]
 
           sm:top-[15%]
           sm:w-[275px]
           sm:h-[40px]
-          lg:top-[10%]
-          md:top-[7%]
+          lg:top-[8%]
+          md:top-[5%]
           md:w-[315px]
           md:h-[44px]
 
