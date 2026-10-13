@@ -1,4 +1,4 @@
-import React from "react";
+
 import backgroundImage from "../assets/backImage.png";
 import Zoom from "../assets/zoom.png";
 import Bull from "../assets/Freddie Bullworth 3 1.png";
@@ -143,7 +143,7 @@ function MainSection() {
           z-10
           top-[1%]
           right-[100%]
-          w-[200px]
+          w-[195px]
           h-[36px]
 
           sm:top-[15%]
@@ -267,6 +267,9 @@ function MainSection() {
             relative
             xl:absolute
 
+            lg:max-w-[560px]
+            xl:max-w-none
+
             font-bold
             text-white
 
@@ -299,7 +302,7 @@ function MainSection() {
             mt-6
             w-full
 
-            lg:max-w-[620px]
+            lg:max-w-[560px]
 
             xl:absolute
             xl:mt-0

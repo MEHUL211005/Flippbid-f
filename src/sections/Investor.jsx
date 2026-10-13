@@ -1,4 +1,4 @@
-import React from "react";
+
 import InvestorCard from "../Component/InvestorCard";
 import TownImg from "../assets/TownImg.png";
 import ChristopherImg from "../assets/Christopher.png";
@@ -33,10 +33,10 @@ function Investor() {
   ];
 
   return (
-    <section className="relative mt-0 w-full overflow-hidden bg-gradient-to-r from-[#00ACDB] via-[#A6F0F7] to-[#FDE3FA] h-[660px] sm:h-[740px] md:h-[500px] lg:h-[520px] xl:mt-112 xl:h-[500px]">
+    <section className="relative mt-0 w-full overflow-hidden bg-gradient-to-r from-[#00ACDB] via-[#A6F0F7] to-[#FDE3FA] h-[660px] sm:h-[740px] md:h-[500px] lg:h-[520px] xl:mt-16 xl:h-[500px]">
       {/* ================= TOWN IMAGE (stage for the cards + lines) ================= */}
       <div
-        className="absolute bg-cover bg-center bg-no-repeat rounded-[14px] left-[5%] top-[280px] w-[90%] h-[340px] sm:left-[6%] sm:top-[330px] sm:w-[88%] sm:h-[380px] md:left-[24%] md:top-[60px] md:w-[74%] md:h-[380px] lg:left-[32%] lg:top-[60px] lg:w-[63%] lg:h-[400px] xl:left-[420px] xl:top-[60px] xl:w-[800px] xl:h-[380px]"
+        className="absolute bg-cover bg-center bg-no-repeat rounded-[14px] left-[5%] top-[280px] w-[90%] h-[340px] sm:left-[6%] sm:top-[330px] sm:w-[88%] sm:h-[380px] md:left-[24%] md:top-[60px] md:w-[74%] md:h-[380px] lg:left-[32%] lg:top-[60px] lg:w-[63%] lg:h-[400px] xl:left-[420px] xl:top-[60px] xl:w-[800px] xl:h-[380px] 2xl:left-[calc(50%-270px)]"
         style={{ backgroundImage: `url(${TownImg})` }}
       >
         {/* ================= DECORATIVE LINES (sized/positioned relative to the town) ================= */}
@@ -64,7 +64,7 @@ function Investor() {
       </div>
 
       {/* ================= TEXT + BUTTON ================= */}
-      <div className="absolute bg-white rounded-[14px] px-6 py-6 sm:px-10 left-[5%] top-[24px] w-[90%] sm:left-[6%] sm:top-[28px] sm:w-[80%] md:left-[5%] md:top-[80px] md:w-[40%] md:px-6 lg:left-[7%] lg:top-[80px] lg:w-[38%] lg:px-10 xl:left-[160px] xl:top-[100px] xl:w-[490px] xl:h-[300px] xl:p-0">
+      <div className="absolute bg-white rounded-[14px] px-6 py-6 sm:px-10 left-[5%] top-[24px] w-[90%] sm:left-[6%] sm:top-[28px] sm:w-[80%] md:left-[5%] md:top-[80px] md:w-[40%] md:px-6 lg:left-[7%] lg:top-[80px] lg:w-[38%] lg:px-10 xl:left-[160px] xl:top-[100px] xl:w-[490px] xl:h-[300px] xl:p-0 2xl:left-[calc(50%-530px)]">
         <p className="text-[26px] sm:text-[32px] md:text-[30px] xl:text-[40px] font-bold xl:ml-10 xl:mt-5 bg-gradient-to-r from-[#C830EB] to-[#00ACDB] bg-clip-text text-transparent">
           FREE Verified
         </p>

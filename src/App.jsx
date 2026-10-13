@@ -1,9 +1,8 @@
-import React from 'react'
-import Index from './index.jsx'
+import Home from './pages/Home'
 function App() {
   return (
     <div>
-      <Index />
+      <Home />
     </div>
   )
 }

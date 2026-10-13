@@ -1,4 +1,4 @@
-import React from "react";
+
 import Section2Image from "../assets/GroupSection2.png";
 import Button from "../Component/Button";
 

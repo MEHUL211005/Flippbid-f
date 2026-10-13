@@ -1,4 +1,4 @@
-import React from "react";
+
 import Vector from "../assets/Vector 2.png";
 import LaptopImg from "../assets/LaptopImg.png";
 import Silver from "../assets/Silver.png";
@@ -23,19 +23,19 @@ function Section3() {
       <div className="relative w-full px-5 py-12 sm:px-8 lg:h-[700px] lg:px-8 lg:py-0 xl:h-0 xl:p-0">
         {/* ============ TITLE ============ */}
         <div className="flex flex-wrap items-baseline justify-center gap-x-2 text-center sm:gap-x-3 lg:justify-start lg:text-left xl:block">
-          <p className="font-semibold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent text-[24px] sm:text-[27px] lg:absolute lg:top-[32px] lg:left-[32px] xl:top-[50px] xl:left-[100px] xl:text-[27px]">
+          <p className="font-semibold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent text-[24px] sm:text-[27px] lg:absolute lg:top-[32px] lg:left-[32px] xl:top-[50px] xl:left-[100px] xl:text-[27px] 2xl:left-[calc(50%-558px)]">
             FlipBidd
           </p>
-          <p className="text-[24px] sm:text-[27px] font-semibold text-[#575665] lg:absolute lg:top-[32px] lg:left-[142px] xl:top-[50px] xl:left-[220px] xl:text-[27px]">
+          <p className="text-[24px] sm:text-[27px] font-semibold text-[#575665] lg:absolute lg:top-[32px] lg:left-[142px] xl:top-[50px] xl:left-[220px] xl:text-[27px] 2xl:left-[calc(50%-438px)]">
             Key
           </p>
-          <p className="text-[20px] sm:text-[25px] font-bold font-semibold text-[#575665] basis-full lg:absolute lg:top-[72px] lg:left-[32px] xl:basis-auto xl:top-[90px] xl:left-[100px] xl:text-[25px]">
+          <p className="text-[20px] sm:text-[25px] font-bold font-semibold text-[#575665] basis-full lg:absolute lg:top-[72px] lg:left-[32px] xl:basis-auto xl:top-[90px] xl:left-[100px] xl:text-[25px] 2xl:left-[calc(50%-558px)]">
             Features
           </p>
         </div>
 
         {/* ============ FEATURE LIST ============ */}
-        <div className="mx-auto mt-6 flex w-full max-w-[450px] flex-col gap-3 lg:absolute lg:mx-0 lg:mt-0 lg:top-[125px] lg:left-[32px] lg:w-[44%] lg:max-w-none lg:gap-3 xl:top-[150px] xl:left-[80px] xl:w-[650px] xl:gap-4">
+        <div className="mx-auto mt-6 flex w-full max-w-[450px] flex-col gap-3 lg:absolute lg:mx-0 lg:mt-0 lg:top-[125px] lg:left-[32px] lg:w-[44%] lg:max-w-none lg:gap-3 xl:top-[150px] xl:left-[80px] xl:w-[650px] xl:gap-4 2xl:left-[calc(50%-578px)]">
           {featuresList.map((item, index) => (
             <div
               key={index}
@@ -54,7 +54,7 @@ function Section3() {
         </div>
 
         {/* ============ ARTWORK ============ */}
-        <div className="relative mt-8 h-[283px] w-full overflow-hidden sm:h-[480px] sm:mt-10 md:h-[565px] md:mt-12 lg:absolute lg:mt-0 lg:top-[125px] lg:right-[60px] lg:h-[430px] lg:w-[44%] lg:overflow-visible xl:left-[620px] xl:right-auto xl:top-[150px] xl:h-[565px] xl:w-[615px]">
+        <div className="relative mt-8 h-[283px] w-full overflow-hidden sm:h-[480px] sm:mt-10 md:h-[565px] md:mt-12 lg:absolute lg:mt-0 lg:top-[125px] lg:right-[80px] lg:h-[430px] lg:w-[44%] lg:overflow-visible xl:left-[620px] xl:right-auto xl:top-[150px] xl:h-[565px] xl:w-[615px] 2xl:left-[calc(50%-38px)]">
           <div className="absolute left-1/2 top-0 w-[615px] h-[565px] -translate-x-1/2 origin-top scale-[0.5] sm:scale-[0.85] md:scale-100 lg:left-0 lg:translate-x-0 lg:scale-[0.68] xl:scale-100">
             {/* Gradient circle */}
             <div className="rounded-[50%] absolute top-[30px] left-[30px] h-[518px] w-[518px] bg-gradient-to-r from-[#A6F0F7]  to-[#FDE3FA]">
@@ -67,7 +67,7 @@ function Section3() {
               </div>
               <div className="absolute top-[70px] left-[340px] w-[220px] h-[55px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] rounded-[14px] z-0 flex items-center justify-center">
                 <div className="absolute top-[1px] left-[1px] bg-white rounded-[13px] w-[218px] h-[53px] flex items-center justify-center">
-                  <p className="text-[#00ACDB] text-[17px]">
+                  <p className="text-[#00ACDB] text-[19px] font-semibold">
                     FlippBidd One Touch
                   </p>
                 </div>

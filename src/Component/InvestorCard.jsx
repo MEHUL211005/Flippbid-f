@@ -1,4 +1,4 @@
-import React from "react";
+
 import Elips from "../assets/Ellipse 187.svg";
 import Tick from "../assets/gridTick.svg";
 function InvestorCard({ name, role, image, positionClass }) {
