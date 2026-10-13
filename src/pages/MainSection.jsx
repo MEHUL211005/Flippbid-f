@@ -134,7 +134,7 @@ function MainSection() {
         <img
           src={Bull}
           alt="Bull"
-          className="absolute inset-0 h-full w-full object-contain object-bottom"
+          className="absolute inset-0 h-full w-full object-contain object-bottom xl:h-[570px] xl:left-[30px]"
         />
 
         <div
@@ -154,9 +154,10 @@ function MainSection() {
           md:w-[315px]
           md:h-[44px]
 
-          xl:top-[8%]
+          xl:top-[6%]
           xl:w-[349px]
           xl:h-[44px]
+          xl:right-[310px]
 
           bg-white
           rounded-[50px]
@@ -224,7 +225,7 @@ function MainSection() {
             md:w-[38px]
             md:h-[42px]
             xl:w-[39px]
-            xl:h-[45px]
+            xl:h-[60px]
             bg-white
             rotate-[170deg]
           "
